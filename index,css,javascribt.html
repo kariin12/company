@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Garden Premium | Professional Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Fresh<span>Garden</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Adeegyada</a></li>
+                <li><a href="#products">Dukaanka</a></li>
+                <li><a href="#about">Nagu Saabsan</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-box">
+            <span id="userBadge"></span>
+            <button class="btn-login" onclick="openModal('loginModal')">Login</button>
+            <div class="cart-trigger" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Ku soo dhowow Fresh Garden Online</h1>
+                <p>Waxaan kuu haynaa khudaar iyo miro tayo leh oo laga soo guray beeraheenna dalka. Caafimaadkaaga waa muhiimadayada koowaad. Hadda dalbo oo ka faa'iideyso qiimo dhimis ilaa 20% ah.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn-primary">Bilow Iibsashada</a>
+                    <a href="#about" class="btn-secondary">Baro Wax Badan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Adeegyada aan bixino</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">🚚</div>
+                    <h3>Gees-ka-gees Geeyn</h3>
+                    <p>Waxaan alaabta kuugu keeni doonaa gurigaaga ama goobtaada shaqada muddo 30 daqiiqo gudahood ah.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🌿</div>
+                    <h3>100% Organic</h3>
+                    <p>Dhammaan alaabtayadu waa kuwo dabiici ah oo aan la isticmaalin kiimikooyinka waxyeellada leh.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💳</div>
+                    <h3>Lacag Bixin Fudud</h3>
+                    <p>Waxaad ku bixin kartaa EVC Plus, e-Dahab, ama kaarka bangiga adigoo ammaan ku qanacsan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="store-section">
+        <div class="container">
+            <h2 class="section-title">Dukaanka Miraha & Khudaarta</h2>
+            <div class="search-filter">
+                <input type="text" id="searchInput" placeholder="Raadi magaca alaabta..." onkeyup="searchEngine()">
+                <div class="category-tabs">
+                    <button class="tab active" onclick="filterCat('All')">Dhammaan</button>
+                    <button class="tab" onclick="filterCat('Miro')">Miraha</button>
+                    <button class="tab" onclick="filterCat('Khudaar')">Khudaarta</button>
+                </div>
+            </div>
+            <div class="product-grid" id="main-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1595665593673-bf1ad72905c0?w=600" alt="Farmer">
+            </div>
+            <div class="about-info">
+                <h2>Maxaad noo dooranaysaa?</h2>
+                <p>Shirkadda Fresh Garden waxaa la aasaasay sanadkii 2020 si loo daboolo baahida loo qabo cunto caafimaad leh oo qiimo jaban. Waxaan la shaqaynaa in ka badan 50 beeralay oo ku yaal gobollada dalka.</p>
+                <ul>
+                    <li>✅ Hubinta tayada maalin kasta.</li>
+                    <li>✅ Adeeg macmiil oo 24/7 ah.</li>
+                    <li>✅ Taageerada beeralayda yar-yar.</li>
+                </ul>
+                <p>Himiladeenu waa inaan noqono dukaanka koowaad ee loo soo raadsado khudaarta dalka oo dhan.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Maqaallada Caafimaadka</h2>
+            <div class="blog-grid">
+                <div class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?w=400" alt="Veggies">
+                    <span>Feb 20, 2026</span>
+                    <h4>5 Sababood oo Karootada u fiican tahay</h4>
+                    <p>Karootada waxay qani ku tahay Vitamin A kaasoo u fiican aragga indhaha...</p>
+                    <a href="#">Akhri wax badan</a>
+                </div>
+                <div class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400" alt="Avocado">
+                    <span>Feb 18, 2026</span>
+                    <h4>Saliidda Avocado iyo Maqaarka</h4>
+                    <p>Baro sida loogu daryeelo maqaarka wajiga adigoo isticmaalaya avocado...</p>
+                    <a href="#">Akhri wax badan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Nala Soo Xiriir</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p>📍 Wadada Maka Al-Mukarama, Muqdisho</p>
+                    <p>📞 +252 61 XXXXXXX</p>
+                    <p>✉️ info@freshgarden.so</p>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <input type="text" id="cName" placeholder="Magacaaga" required>
+                    <input type="email" id="cEmail" placeholder="Gmail Address" required>
+                    <input type="tel" id="cPhone" placeholder="Mobile Number" required>
+                    <textarea id="cMsg" placeholder="Farriintaada halkan ku qor..." rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Dir Farriinta</button>
+                    <p id="formFeedback"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h3>Login / Sign Up</h3>
+            <p style="font-size: 12px; margin-bottom: 15px;">Fadlan geli xogtaada si aad u dalbato.</p>
+            <form id="authForm">
+                <input type="text" id="uName" placeholder="Magaca oo buuxa" required>
+                <input type="email" id="uEmail" placeholder="Email" required>
+                <input type="tel" id="uPhone" placeholder="Mobile Number" required>
+                <input type="password" id="uPass" placeholder="Password (Min 6 chars)" required>
+                <button type="submit" class="btn-primary" style="width: 100%;">Submit Account</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="cartSidebar" class="cart-sidebar">
+        <h3>Gaarigaaga <span class="close-side" onclick="toggleCart()">×</span></h3>
+        <div id="cart-list"></div>
+        <div class="cart-footer">
+            <h4>Total: $<span id="cart-total">0.00</span></h4>
+            <button class="checkout-btn" onclick="processOrder()">Check Out Now</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fresh Garden Online Store. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
